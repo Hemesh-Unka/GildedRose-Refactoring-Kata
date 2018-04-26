@@ -1,0 +1,27 @@
+{
+  "name": "gildedrose-tech-test",
+  "version": "1.0.0",
+  "description": "This Kata was originally created by Terry Hughes (http://twitter.com/#!/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/).",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-mocha-reporter": "^2.0.0"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hemesh-Unka/gildedrose-tech-test.git"
+  },
+  "author": "Hemesh Unka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hemesh-Unka/gildedrose-tech-test/issues"
+  },
+  "homepage": "https://github.com/Hemesh-Unka/gildedrose-tech-test#readme"
+}
