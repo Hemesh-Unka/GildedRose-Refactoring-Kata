@@ -11,6 +11,7 @@ describe("Gilded Rose", function() {
     const gildedRose = new Shop([ new Item("Item", 0, 2)])
     gildedRose.updateQuality();
 
+    expect(gildedRose.items[0].sellIn).toEqual(-1);
     expect(gildedRose.items[0].quality).toEqual(0);
   });
 
@@ -19,8 +20,16 @@ describe("Gilded Rose", function() {
     gildedRose.updateQuality();
     gildedRose.updateQuality();
 
-    expect(gildedRose.items[0].quality).toEqual(0);
+    expect(gildedRose.items[0].quality).toBe(0);
     expect(gildedRose.items[0].quality).not.toBe(-2);
+  });
+
+  it('Aged Brie - increases in quality the older it gets', function() {
+    const gildedRose = new Shop([ new Item("Aged Brie", 0, 2)])
+    gildedRose.updateQuality();
+
+    expect(gildedRose.items[0].sellIn).toEqual(-1);
+    expect(gildedRose.items[0].quality).toEqual(4);
   });
 
 });
