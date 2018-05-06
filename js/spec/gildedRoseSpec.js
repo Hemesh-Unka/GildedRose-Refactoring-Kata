@@ -7,7 +7,6 @@ describe("Gilded Rose", function() {
   });
 
   it('once the sell by date had passed, quality degrades twice as fast', function() {
-    // constructor(name, sellIn, quality){
     const gildedRose = new Shop([ new Item("Item", 0, 2)])
     gildedRose.updateQuality();
 
@@ -32,4 +31,12 @@ describe("Gilded Rose", function() {
     expect(gildedRose.items[0].quality).toEqual(4);
   });
 
+  it('checks that the quality of an item is never more than 50', function() {
+    const gildedRose = new Shop([ new Item("Aged Brie", 0, 2)])
+    for (var i = 0; i < 100; i++) {
+      gildedRose.updateQuality();
+    }
+    // constructor(name, sellIn, quality){
+    expect(gildedRose.items[0].quality).toBe(50)
+  });
 });
